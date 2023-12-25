@@ -1,9 +1,0 @@
-{
-	"python.analysis.extraPaths": [
-		"./modules",
-		"./src/actions",
-		"./app/src/actions",
-		"./app/src/models",
-		"./app/src/enums"
-	]
-}
