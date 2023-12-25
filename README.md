@@ -42,11 +42,8 @@ To fully understand how this project works, we all need to first understand this
 
 ## How to run source code locally ?
 
-- ### RUN TESTS :
-```make test```
+- ### TESTS : ```make test```
 
-- ### RUN PROJECT :
-```make run```
+- ### RUN : ```make run```
 
-- ### CLEAN PROJECT :
-```make clean```
+- ### CLEAN : ```make clean```
