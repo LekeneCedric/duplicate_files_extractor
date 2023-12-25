@@ -35,7 +35,7 @@ To fully understand how this project works, we all need to first understand this
 
 1. We browse the parent directory, and save its entire tree in a data structure **(n-ary tree)**
 
-2. Next time , for each **n-ary tree** node ( correspoding to sub_folders ) we browse his files and save hash in another datastructure (**dictionary**) like key = file_hash and value = array of files that have same hash
+2. Next time , for each **n-ary tree** node ( correspoding to sub_folders ) we browse his files and save hash in another datastructure (**dictionary**) like **key = file_hash** and **value = array of files that have same hash**
 
 3. Finally , we browse her dictionary to show / delete all duplicates files in tree
 
