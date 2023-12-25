@@ -26,7 +26,4 @@ class file_item:
 
     def get_childs(self) -> 'file_item':
         return self.childs
-
-    def extract_duplicates(self):
-        self.number_duplicates = 0
-        self.duplicates = {}
+    

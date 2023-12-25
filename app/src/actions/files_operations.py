@@ -29,7 +29,7 @@ def load_file(file_path: str) -> file_item:
 
     is_dir = path.isdir(file_path.replace('\ ', ' '))
 
-    print(f"{'Dossier :' if is_dir else 'Fichier :'} {file_path}")
+    # print(f"{'Dossier :' if is_dir else 'Fichier :'} {file_path}")
     type = file_type.DIR if is_dir else file_type.FILE
 
     file_name = file_path.split('/').pop() if not is_dir else file_path+'/'
