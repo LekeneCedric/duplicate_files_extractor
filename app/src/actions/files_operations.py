@@ -1,6 +1,6 @@
 import subprocess
 import sys
-from os import path
+from os import path, remove
 from pathlib import Path
 
 sys.path.append('../../app/src/models')
@@ -24,6 +24,10 @@ def list_dir(path: str) -> list:
    files = result.stdout.split('\n')
    files.pop()
    return files
+
+def delete_file(path: str) -> bool:
+    
+    remove(path)
 
 def load_file(file_path: str) -> file_item:
 

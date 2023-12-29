@@ -1,17 +1,19 @@
 import sys
 from os import path, system
 
-sys.path.append('models/')
-sys.path.append('enums/')
-sys.path.append('actions/')
+sys.path.append('app/src/models/')
+sys.path.append('app/src/enums/')
+sys.path.append('app/src/actions/')
 
 from file_item import file_item
 from files_type import file_type
 from files_operations import list_dir, load_file, read_root
 from extract_duplicates import extract_duplicates
 from utils import println, extract_file_name_from_path
+from remove_duplicates import remove_duplicates
 
-ROOT_PATH = '/home/code237/Documents/GitHub/PERSONAL_PROJECTS/no-more-duplicates-files/test_dir'
+ROOT_PATH = '/home/code237/Documents/GitHub/PERSONAL_PROJECTS/no-more-duplicates-files/test_dir/'
+
 if __name__ == '__main__':
 
   files = list_dir(ROOT_PATH)
@@ -29,11 +31,13 @@ if __name__ == '__main__':
   duplicates = []
   duplicates = extract_duplicates(root)
 
+  remove_duplicates(duplicates)
 
-  for duplicate in duplicates:
-    println('----------------------------------------')
-    for file in duplicates[duplicate]:
-      println(f'[+] {extract_file_name_from_path(file)}')
+  # for duplicate in duplicates:
+  #   if len(duplicates[duplicate]) < 1:
+  #     println('----------------------------------------')
+  #     for file in duplicates[duplicate]:
+  #       println(f'[+] {extract_file_name_from_path(file)} | {file}')
 
 
 
